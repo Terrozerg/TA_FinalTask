@@ -3,7 +3,7 @@ Feature: shop by category
   I want to have categories
   So i can browse categorised items
 
-  @smoke
+  @smoke @test
   Scenario Outline: Select item by category
     Given User opens home page
     And User checks 'shop by category' button visibility

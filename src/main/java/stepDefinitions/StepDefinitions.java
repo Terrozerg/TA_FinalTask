@@ -8,20 +8,17 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import pageObject.PageObject;
 import pages.AdvancedSearchPage;
 import pages.CheckoutPage;
 import pages.SignInPage;
 import pages.basePages.*;
 import utils.CookiesLoader;
 import utils.CredentialsParser;
+import utils.DriverManager;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
 public class StepDefinitions {
     WebDriver driver;
@@ -42,8 +39,7 @@ public class StepDefinitions {
 
     @Before
     public void setUp() {
-        chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = DriverManager.getWebDriverForBrowser();
         driver.manage().window().maximize();
 
         pageFactoryManager = new PageFactoryManager(driver);
