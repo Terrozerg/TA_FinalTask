@@ -3,7 +3,7 @@ Feature: buy
   I want a buy feature
   So i can purchase items
 
-  @capcha @test1
+  @capcha @retry
   Scenario Outline: Purchase an item as guest
     Given User opens item page '<ItemPage>'
     And User check item title visibility

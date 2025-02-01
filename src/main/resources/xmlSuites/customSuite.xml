@@ -3,6 +3,7 @@
 <suite name="customSuite">
     <listeners>
         <listener class-name="utils.ReportListener"/>
+        <listener class-name="utils.RetryListener"/>
     </listeners>
     <test name="customSuite">
         <classes>
