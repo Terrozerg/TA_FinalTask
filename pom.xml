@@ -13,7 +13,7 @@
         <cucumber.version>7.20.1</cucumber.version>
         <testNG.version>7.7.0</testNG.version>
 
-        <suiteXmlFile>src/main/resources/xmlSuites/smokeSuite.xml</suiteXmlFile>
+        <suiteXmlFile>src/main/resources/xmlSuites/customSuite.xml</suiteXmlFile>
         <threadCount>2</threadCount>
     </properties>
 
@@ -58,6 +58,8 @@
                     </properties>
                 </configuration>
             </plugin>
+
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

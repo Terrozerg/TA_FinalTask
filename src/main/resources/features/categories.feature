@@ -3,7 +3,7 @@ Feature: shop by category
   I want to have categories
   So i can browse categorised items
 
-  @smoke @test
+  @smoke @test @parallel
   Scenario Outline: Select item by category
     Given User opens home page
     And User checks 'shop by category' button visibility
@@ -23,7 +23,7 @@ Feature: shop by category
       | "Cameras & Photo"     | "Lighting & Studio"  |
 
 
-  @smoke
+  @smoke @custom
   Scenario Outline: Select item by brand
     Given User opens home page
     And User checks 'shop by category' button visibility

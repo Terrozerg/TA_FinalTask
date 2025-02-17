@@ -3,6 +3,7 @@
 <suite name="smokeSuite">
     <listeners>
         <listener class-name="utils.ReportListener"/>
+        <listener class-name="utils.RetryListener"/>
     </listeners>
     <test name="smokeSuite">
         <classes>

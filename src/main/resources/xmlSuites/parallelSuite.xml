@@ -3,10 +3,11 @@
 <suite name="customSuite">
     <listeners>
         <listener class-name="utils.ReportListener"/>
+        <listener class-name="utils.RetryListener"/>
     </listeners>
-    <test name="customSuite">
+    <test name="parallelSuite">
         <classes>
-            <class name="runner.CustomRunner"/>
+            <class name="runner.ParallelRunner"/>
         </classes>
     </test>
 </suite>

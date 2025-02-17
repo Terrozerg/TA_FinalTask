@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.devtools.DevTools;
 import org.testng.Assert;
 import pages.AdvancedSearchPage;
 import pages.CheckoutPage;
@@ -22,6 +23,7 @@ import java.util.List;
 
 public class StepDefinitions {
     WebDriver driver;
+    DevTools devTools;
 
     PageFactoryManager pageFactoryManager;
     HomePage homePage;
@@ -39,8 +41,9 @@ public class StepDefinitions {
 
     @Before
     public void setUp() {
-        driver = DriverManager.getWebDriverForBrowser();
+        driver = DriverManager.getWebDriver();
         driver.manage().window().maximize();
+        devTools = DriverManager.getDevTools();
 
         pageFactoryManager = new PageFactoryManager(driver);
     }
@@ -464,5 +467,6 @@ public class StepDefinitions {
     @After
     public void shutDown() {
         driver.close();
+        devTools.close();
     }
 }
